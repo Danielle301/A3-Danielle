@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 1368px){
+    h1{
+        color: blue;
+    }
+}
+
+@media (max-width: 844px){
+    h1{
+        color:aqua;
+    }
+}
+
+
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-image: url('images/leafBackground.jpg');
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.imageOverlay{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
