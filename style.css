@@ -57,3 +57,22 @@ body{
     border-radius: 0.5em;
     margin-top: 1.2em;
 }
+
+git ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li{
+ float: left;
+}
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 2em;
+    text-decoration: none;
+}
