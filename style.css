@@ -7,11 +7,7 @@
 }
 
 @media (max-width: 844px){
-    .imageOverlay{
-        display: flex;
-        align-items: center;
-        height: 100vh;
-    }
+
     .blackBox{
         background-color: rgba(0, 0, 0, 0.5);
     }
@@ -58,21 +54,16 @@ body{
     margin-top: 1.2em;
 }
 
-git ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-li{
- float: left;
+.navLinks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    flex-direction: row;
 }
 
 li a{
-    display: block;
     color: white;
     text-align: center;
-    padding: 2em;
     text-decoration: none;
 }
