@@ -67,3 +67,7 @@ li a{
     text-align: center;
     text-decoration: none;
 }
+
+.extraNav{
+    display: none;
+}
