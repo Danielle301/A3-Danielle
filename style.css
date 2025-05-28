@@ -68,6 +68,35 @@ li a{
     text-decoration: none;
 }
 
-.extraNav{
-    display: none;
+.homeNav{
+    text-align: center;
+    padding: 2%;
+}
+
+.homeLink{
+    color: white;
+    text-decoration: none;
+}
+
+.productsHeader{
+    text-align: center;
+    color: black;
+    padding: 1%;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.productsList{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 2%;
+    text-align: center;
+}
+
+.productsList > div{
+    background-color: white;
+    margin: 2%;
+    color: black;
 }
