@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
+    <link 
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,315;1,315&display=swap"
       rel="stylesheet"
     />
@@ -18,9 +18,46 @@
       <header>
         <nav class="mainNav">
           <ul class="navLinks">
-            <li><a class="extraNav" href="#">Search</a></li>
+            <li>
+              <a class="extraNav" href="#">
+                <div class="searchContainer">
+                  <!-- Search Icon -->
+                  <img
+                    src="images/search.png"
+                    alt="Search"
+                    width="20"
+                    height="20"
+                    class="searchIcon"
+                    onclick="toggleSearchUI()"
+                  />
+                
+                  <!-- Search Input and Dropdown -->
+                  <div class="searchDropdown" id="searchDropdown">
+                    <input
+                      type="text"
+                      id="searchInput"
+                      placeholder="Search..."
+                      onkeyup="filterOptions()"
+                    />
+                    <div class="dropdownOptions" id="dropdownOptions">
+                      <a href="#about">About</a>
+                      <a href="#base">Base</a>
+                      <a href="#blog">Blog</a>
+                      <a href="#contact">Contact</a>
+                      <a href="#custom">Custom</a>
+                      <a href="#support">Support</a>
+                      <a href="#tools">Tools</a>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
             <li><a href="products.html">Vital Living Earth</a></li>
-            <li><a class="extraNav" href="cart.html">Cart</a></li>
+            <li>
+              <a class="extraNav" href="cart.html">
+                <img src="images/cart.png" alt="Cart" width="25" height="25" />
+              </a>
+            </li>
           </ul>
         </nav>
       </header>
@@ -81,5 +118,39 @@
         </div>
       </div>
     </div>
+    <script src="myscripts.js"></script>
+    <script>
+      function toggleSearchUI() {
+        const dropdown = document.getElementById("searchDropdown");
+        dropdown.classList.toggle("show");
+        if (dropdown.classList.contains("show")) {
+          document.getElementById("searchInput").focus();
+        }
+      }
+      
+      function filterOptions() {
+        const input = document.getElementById("searchInput");
+        const filter = input.value.toUpperCase();
+        const links = document.querySelectorAll("#dropdownOptions a");
+        links.forEach(link => {
+          const txt = link.textContent || link.innerText;
+          link.style.display = txt.toUpperCase().includes(filter) ? "" : "none";
+        });
+      }
+      
+      window.onclick = function (event) {
+        const dropdown = document.getElementById("searchDropdown");
+        const input = document.getElementById("searchInput");
+        const options = document.querySelectorAll("#dropdownOptions a");
+      
+        if (!event.target.closest(".searchContainer")) {
+          dropdown.classList.remove("show");
+          input.value = "";
+          options.forEach(option => {
+            option.style.display = "";
+          });
+        }
+      };
+      </script>
   </body>
 </html>
