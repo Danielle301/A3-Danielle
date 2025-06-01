@@ -118,39 +118,6 @@
         </div>
       </div>
     </div>
-    <script src="myscripts.js"></script>
-    <script>
-      function toggleSearchUI() {
-        const dropdown = document.getElementById("searchDropdown");
-        dropdown.classList.toggle("show");
-        if (dropdown.classList.contains("show")) {
-          document.getElementById("searchInput").focus();
-        }
-      }
-      
-      function filterOptions() {
-        const input = document.getElementById("searchInput");
-        const filter = input.value.toUpperCase();
-        const links = document.querySelectorAll("#dropdownOptions a");
-        links.forEach(link => {
-          const txt = link.textContent || link.innerText;
-          link.style.display = txt.toUpperCase().includes(filter) ? "" : "none";
-        });
-      }
-      
-      window.onclick = function (event) {
-        const dropdown = document.getElementById("searchDropdown");
-        const input = document.getElementById("searchInput");
-        const options = document.querySelectorAll("#dropdownOptions a");
-      
-        if (!event.target.closest(".searchContainer")) {
-          dropdown.classList.remove("show");
-          input.value = "";
-          options.forEach(option => {
-            option.style.display = "";
-          });
-        }
-      };
-      </script>
+    <script src="myscripts.js"></script> 
   </body>
 </html>
