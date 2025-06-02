@@ -36,3 +36,60 @@ if (!event.target.closest(".searchContainer")) {
   });
 }
 };
+
+document.querySelectorAll('.btn3').forEach(button =>{
+    button.addEventListener('click', () => {
+        button.classList.add('clicked');
+        setTimeout(() => button.classList.remove('clicked'),100);
+    });
+});
+
+
+const cart = JSON.parse(localStorage.getItem("cart")) || {};
+
+function addToCart(productName, productPrice) {
+  if (cart[productName]) {
+    cart[productName].quantity += 1;
+    cart[productName].totalPrice += productPrice;
+  } else {
+    cart[productName] = {
+      quantity: 1,
+      totalPrice: productPrice,
+    };
+  }
+
+  // Save to localStorage
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function updateCartDisplay() {
+    const cartList = document.getElementById("cart");
+    cartList.innerHTML = "";
+    for (let product in cart) {
+      const listItem = document.createElement("li");
+      listItem.innerText = `${product} - Quantity: ${
+        cart[product].quantity
+      } - Total Price: Rs${cart[product].totalPrice.toFixed(2)}`;
+      cartList.appendChild(listItem);
+    }
+  }
+
+  if (window.location.pathname.endsWith("cart.html")){
+    window.addEventListener("DOMContentLoaded", () =>{
+        const cart = JSON.parse(localStorage.getItem("cart")) || {};
+        const cartList= document.getElementById("cart");
+
+        for (let product in cart) {
+            const item = cart[product];
+            const li = document.createElement("li");
+            li.textContent = `${product} - Quantity: ${item.quantity} - Total: $${item.totalPrice.toFixed(2)}`;
+            cartList.appendChild(li);
+          }
+
+          const clearBtn = document.getElementById("clearCart");
+          clearBtn.addEventListener("click", () =>{
+            localStorage.removeItem("cart");
+            cartList.innerHTML = "";
+          });
+        });
+      }
