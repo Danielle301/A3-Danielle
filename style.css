@@ -29,13 +29,34 @@ body{
     box-sizing: border-box;
     padding: 0.5em 1.2em;
     transition: all 0.2s;
+    color: black;
+    border-radius: 0.5em;
 }
 
 .btnPrimary{
     background-color: white;
-    color: black;
-    border-radius: 0.5em;
     margin-top: 1.2em;
+}
+
+.btnSecondary{
+    background-color: #ccc;
+    width: auto;
+    max-width: fit-content;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    margin-top: 10px;
+    margin-top: 1.2em;
+}
+
+.btn3{
+    margin-top: -10px;
+    background-color: #ccc;
+    position: static;
+    width: auto;
+    max-width: fit-content;
+    text-align: center;
+    justify-self: center;
 }
 
 .navLinks{
@@ -55,6 +76,10 @@ li a{
 .homeNav{
     text-align: center;
     padding: 2%;
+}
+
+.productInfo > a{
+    color: black;
 }
 
 .homeLink{
@@ -81,8 +106,7 @@ li a{
 }
 
 .productsList > div{
-
-    background-color: white;
+    background-color: #ccccccc9;
     margin: 2%;
     color: black;
 }
@@ -93,26 +117,6 @@ li a{
     padding: 5%;
     border-radius: 3%;
 }
-
-@media (max-width: 2000px){
-    .imageOverlay{
-        width: 100vw;
-        min-height: 100vh;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-}
-
-@media (max-width: 844px){
-
-    .blackBox{
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .productsList {
-        grid-template-columns: 1fr; /* One column only */
-        gap: 2em;
-    }
-    }
 
     .searchContainer {
       display: flex;
@@ -152,9 +156,10 @@ li a{
       max-height: 200px;
       overflow-y: auto;
       position: absolute;
-      top: 100%; /* directly under input */
+      top: 110%;
       width: 100%;
       z-index: 10;
+      border-radius: 4px;
     }
     
     .dropdownOptions a {
@@ -166,3 +171,74 @@ li a{
     .dropdownOptions a:hover {
       background-color: #ddd;
     }
+
+    .productBox{
+        padding: 2%;
+        margin-top: 5%;
+        background-color: #cccccccc;
+        color: black;
+        margin: 2% 10%;
+        border-radius: 1%;
+        text-align: left;
+        position: relative;
+    }
+    .productsInfo{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+.productText{
+    margin: 5% 1%;
+    display: grid;
+    grid-template-rows: 0.3fr 0.5fr 0.5fr 0.3fr 0.3fr 0.5fr;
+}
+
+.productPhoto{
+    display: flex;
+    align-items: center;
+}
+
+.closeButton{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    z-index: 100;
+}
+@media (max-width: 2000px){
+    .imageOverlay{
+        width: 100vw;
+        min-height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+@media (max-width: 844px){
+
+    .blackBox{
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .productsList {
+        grid-template-columns: 1fr; /* One column only */
+        gap: 2em;
+    }
+    .productsInfo{
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .productPhoto{
+        width: 40%;
+        margin: auto;
+    }
+    .btnSecondary{
+        position: static;
+        width: auto;
+        max-width: fit-content;
+        text-align: center;
+        justify-self: center;
+    }
+}

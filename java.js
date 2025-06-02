@@ -1,5 +1,4 @@
 function toggleSearchUI() {
-    console.log("Search icon clicked");
     const dropdown = document.getElementById("searchDropdown");
     dropdown.classList.toggle("show");
     if (dropdown.classList.contains("show")) {
