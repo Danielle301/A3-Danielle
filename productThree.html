@@ -47,10 +47,20 @@
                 </div>
               </div>
             </li>
-            <li><a href="products.html">Vital Living Earth</a></li>
+            <li>
+              <a href="products.html" class="homeLink">Vital Living Earth</a>
+            </li>
             <li>
               <a class="extraNav" href="cart.html">
-                <img src="images/cart.png" alt="Cart" width="25" height="25" />
+                <div class="cartIcon">
+                  <img
+                    src="images/cart.png"
+                    alt="Cart"
+                    width="25"
+                    height="25"
+                  />
+                  <span id="cartCount" class="cartCountIcon">0</span>
+                </div>
               </a>
             </li>
           </ul>
@@ -67,14 +77,16 @@
             />
           </div>
           <div class="productText">
-            <h2>Multi Purpose Cleaner 6 Pack 100ml</h2>
-            <p>$105.40 AUD</p>
-            <p>
+            <h2 class="productTitle spaceBelow">
+              Multi Purpose Cleaner 6 Pack 100ml
+            </h2>
+            <p class="spaceBelow">$105.40 AUD</p>
+            <p class="spaceBelow">
               This 100% organic multi purpose cleaner is affordable and eco
               friendly replacing over 26 other chemical products
             </p>
-            <h2>Uses</h2>
-            <p>
+            <h2 class="spaceBelow">Uses</h2>
+            <p class="spaceBelow">
               Can be used as a bathroom, kitchen, floor, oven, basin, rangehood,
               toilet, window and barbeque cleaner. As well as a drain, bin, room
               and curtain deodoriser
@@ -89,10 +101,16 @@
               Stainless Steel, Aluminium, Copper, Porcelain, Plastic & Sealed
               Rubber Surfaces
             </p>
-            <a href="#" class="btn btnSecondary">Add to Cart</a>
+            <button
+              onclick="addToCart('100ml', 105.40)"
+              class="btn btnSecondary"
+            >
+              Add To Cart
+            </button>
           </div>
         </div>
       </div>
+      <div class="pageSpacer"></div>
     </div>
     <script src="java.js"></script>
   </body>

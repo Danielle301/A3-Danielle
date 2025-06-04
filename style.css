@@ -64,6 +64,19 @@ body{
     box-shadow: none;
 }
 
+.btnClear{
+    margin-top: 1em;
+}
+
+.btnright{
+    text-align: right;
+}
+
+.buttonRow{
+    display: flex;
+    justify-content: space-between;
+}
+
 .btn.clicked{
     background-color: #a2a2a2;
 }
@@ -94,6 +107,14 @@ li a{
 .homeLink{
     color: white;
     text-decoration: none;
+    font-size: 1.5em;
+}
+
+.centerWhite{
+    color: white;
+    text-align: center;
+    display: block;
+    padding-bottom: 2em;
 }
 
 .productsHeader{
@@ -195,7 +216,7 @@ li a{
         margin-top: 5%;
         background-color: #cccccccc;
         color: black;
-        margin: 2% 10%;
+        margin: 4% 10% 6% 10%;
         border-radius: 1%;
         text-align: left;
         position: relative;
@@ -207,13 +228,19 @@ li a{
 
 .productText{
     margin: 5% 1%;
-    display: grid;
-    grid-template-rows: 0.3fr 0.5fr 0.5fr 0.3fr 0.3fr 0.5fr;
 }
 
 .productPhoto{
     display: flex;
     align-items: center;
+}
+
+.productTitle{
+    font-size: 1.2em;
+}
+
+.spaceBelow{
+    padding-bottom: 1em;
 }
 
 .closeButton{
@@ -225,7 +252,105 @@ li a{
     color: black;
     z-index: 100;
 }
-@media (max-width: 2000px){
+
+.cartIcon{
+    position: relative;
+    display: inline-block;
+    right: 10px;
+}
+
+.cartCountIcon{
+    position: absolute;
+    bottom: -8px;
+    right: -10px;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.cartItemSummary{
+    padding: 2em;
+    color: black;
+    background-color: #ccccccc9;
+    margin: 2em;
+    border-radius: 1em;
+}
+
+.cartContainer, .cartItem{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1em;
+    padding: 1em 0;
+    border-bottom: 1px solid #8a8a8a80;
+    font-weight: bold;
+}
+
+.cartItems .cartItem{
+    font-weight: normal;
+}
+
+
+.checkOutForm{
+    max-width: 80%;
+    margin: auto;
+    padding: 2em;
+    border-radius: 2em;
+}
+
+.checkOutForm h2{
+    font-size: 1.2em;
+    margin: 1em 0 0.5em;
+}
+
+.checkOutForm input{
+width: 100%;
+padding: 0.75em;
+margin-bottom: 1em;
+font-size: 1em;
+border: 1px solid #ccc;
+border-radius: 10px;
+box-sizing: border-box;
+}
+
+.nameRow,
+.locationRow,
+.paymentRow {
+  display: flex;
+  gap: 1em;
+}
+
+.nameRow input,
+.locationRow input,
+.paymentRow input {
+  flex: 1;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 1em;
+    background-color: #0a2d2b;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .pageSpacer {
+    height: 2vh; /* or try 50px for fixed size */
+  }
+
+  @media (max-width: 2000px){
     .imageOverlay{
         width: 100vw;
         min-height: 100vh;
@@ -259,4 +384,15 @@ li a{
         text-align: center;
         justify-self: center;
     }
+
+    .nameRow,
+    .locationRow,
+    .paymentRow {
+        display: block;
+}
+
+.checkOutForm{
+    max-width: 100%;
+    padding: 0em;
+}
 }

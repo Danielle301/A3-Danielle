@@ -47,51 +47,69 @@
                 </div>
               </div>
             </li>
-            <li><a href="products.html">Vital Living Earth</a></li>
+            <li>
+              <a href="index.html" class="homeLink">Vital Living Earth</a>
+            </li>
             <li>
               <a class="extraNav" href="cart.html">
-                <img src="images/cart.png" alt="Cart" width="25" height="25" />
+                <div class="cartIcon">
+                  <img
+                    src="images/cart.png"
+                    alt="Cart"
+                    width="25"
+                    height="25"
+                  />
+                  <span id="cartCount" class="cartCountIcon">0</span>
+                </div>
               </a>
             </li>
           </ul>
         </nav>
       </header>
-      <div class="productBox">
-        <a href="products.html" class="closeButton">x</a>
-        <div class="productsInfo">
-          <div class="productPhoto">
-            <img
-              src="images/product one.png"
-              alt="40L Multi Purpose Cleaner"
-              width="100%"
-            />
-          </div>
-          <div class="productText">
-            <h2>Multi Purpose Cleaner 40L</h2>
-            <p>$459.00 AUD</p>
-            <p>
-              This 100% organic multi purpose cleaner is affordable and eco
-              friendly replacing over 26 other chemical products
-            </p>
-            <h2>Uses</h2>
-            <p>
-              Can be used as a bathroom, kitchen, floor, oven, basin, rangehood,
-              toilet, window and barbeque cleaner. As well as a drain, bin, room
-              and curtain deodoriser
-            </p>
-            <p>
-              Breaks Down Oils & Fats from Cooktop, Stovetop, Oven, Microwave,
-              BBQ and Range Hood / Filters. Cleans & Deodorises Sinks, Basins,
-              Bath Tubs, Toilets, Drains & Bins 2in1 Laundry Detergent & Tub
-              Wash - Add 100ml Loosens & Removes Dirt, Dust, Grease, Grime,
-              Limescale, Ink, Wine Spills, Some Graffiti & Sticky Tape Residue
-              from Hard Non Porous Surfaces including Stone, Sealed Concrete,
-              Stainless Steel, Aluminium, Copper, Porcelain, Plastic & Sealed
-              Rubber Surfaces
-            </p>
-            <a href="#" class="btn btnSecondary">Add to Cart</a>
+      <div class="productWrap">
+        <div class="productBox">
+          <a href="products.html" class="closeButton">x</a>
+          <div class="productsInfo">
+            <div class="productPhoto">
+              <img
+                src="images/product one.png"
+                alt="40L Multi Purpose Cleaner"
+                width="100%"
+              />
+            </div>
+            <div class="productText">
+              <h2 class="productTitle spaceBelow">Multi Purpose Cleaner 40L</h2>
+              <p class="spaceBelow">$459.00 AUD</p>
+              <p class="spaceBelow">
+                This 100% organic multi purpose cleaner is affordable and eco
+                friendly replacing over 26 other chemical products
+              </p>
+              <h2 class="spaceBelow">Uses</h2>
+              <p class="spaceBelow">
+                Can be used as a bathroom, kitchen, floor, oven, basin,
+                rangehood, toilet, window and barbeque cleaner. As well as a
+                drain, bin, room and curtain deodoriser
+              </p>
+              <p>
+                Breaks Down Oils & Fats from Cooktop, Stovetop, Oven, Microwave,
+                BBQ and Range Hood / Filters. Cleans & Deodorises Sinks, Basins,
+                Bath Tubs, Toilets, Drains & Bins 2in1 Laundry Detergent & Tub
+                Wash - Add 100ml Loosens & Removes Dirt, Dust, Grease, Grime,
+                Limescale, Ink, Wine Spills, Some Graffiti & Sticky Tape Residue
+                from Hard Non Porous Surfaces including Stone, Sealed Concrete,
+                Stainless Steel, Aluminium, Copper, Porcelain, Plastic & Sealed
+                Rubber Surfaces
+              </p>
+              <button
+                onclick="addToCart('40L', 459.90)"
+                class="btn btnSecondary"
+              >
+                Add To Cart
+              </button>
+            </div>
           </div>
         </div>
+        <div class="pageSpacer"></div>
       </div>
     </div>
     <script src="java.js"></script>

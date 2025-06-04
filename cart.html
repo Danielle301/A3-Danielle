@@ -6,7 +6,6 @@
     <title>Cart</title>
     <link rel="stylesheet" href="cssReset.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="java.js" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,13 +17,57 @@
     <div class="imageOverlay">
       <header>
         <nav class="homeNav">
-          <a class="homeLink" href="products.html">Vital Living Earth</a>
+          <a class="homeLink" href="index.html">Vital Living Earth</a>
         </nav>
       </header>
-      <h2>Cart</h2>
-      <ul id="cart"></ul>
-      <button id="clearCart">Clear Cart</button>
-      <script src="java.js"></script>
+      <h2 class="productsHeader">Cart</h2>
+      <div class="cartItemSummary">
+        <div class="cartContainer">
+          <div>Product</div>
+          <div>Quantity</div>
+          <div>Total</div>
+        </div>
+        <div id="cartItems" class="cartItems"></div>
+        <div class="buttonRow">
+          <button id="clearCart" class="btn btn3 btnClear">Clear Cart</button>
+          <button id="checkoutButton" class="btn btn3 btnClear btnright">
+            Check Out
+          </button>
+        </div>
+        <div>
+          <form
+            class="checkOutForm"
+            id="checkOutForm"
+            style="display: none"
+            action="confirm.html"
+          >
+            <h2>Contact</h2>
+            <input type="Email" placeholder="Email" />
+            <h2>Delivery</h2>
+            <input type="text" placeholder="Country" />
+            <div class="nameRow">
+              <input type="text" placeholder="First Name" />
+              <input type="text" placeholder="Last name" />
+            </div>
+            <input type="text" placeholder="Address" />
+            <div class="locationRow">
+              <input type="text" placeholder="City" />
+              <input type="text" placeholder="State" />
+              <input type="text" placeholder="Postcode" />
+            </div>
+            <h2>Payment</h2>
+            <input type="number" placeholder="Card Number" />
+            <div class="paymentRow">
+              <input type="date" placeholder="Expiration Date" />
+              <input type="number" placeholder="CVC" />
+            </div>
+            <input type="text" placeholder="Name on Card" />
+            <button type="submit">Pay Now</button>
+          </form>
+        </div>
+      </div>
+      <a href="products.html" class="centerWhite">Continue Shopping</a>
     </div>
+    <script src="java.js"></script>
   </body>
 </html>
