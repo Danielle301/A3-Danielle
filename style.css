@@ -1,3 +1,4 @@
+/* === GENERAL PAGE STYLING === */
 body{
     width: 100vw;
     height: 100vh;
@@ -8,6 +9,7 @@ body{
     letter-spacing: 0.1em;
 }
 
+/* === centered box on index page === */
 .blackBox{
     position: absolute;
     top: 50%;
@@ -23,6 +25,7 @@ body{
     margin-bottom: 0.5em;
 }
 
+/* === BUTTON STYLES === */
 .btn{
     text-decoration: none;
     display: inline-block;
@@ -37,11 +40,13 @@ body{
     cursor: pointer;
 }
 
+/* === white primary button === */
 .btnPrimary{
     background-color: white;
     margin-top: 1.2em;
 }
 
+/* === grey button === */
 .btnSecondary{
     background-color: #ccc;
     width: auto;
@@ -53,6 +58,7 @@ body{
     margin-top: 1.2em;
 }
 
+/* === centered grey button === */
 .btn3{
     margin-top: -10px;
     background-color: #ccc;
@@ -64,23 +70,28 @@ body{
     box-shadow: none;
 }
 
+/* === clear cart button === */
 .btnClear{
     margin-top: 1em;
 }
 
+/* === right aligned button === */
 .btnright{
     text-align: right;
 }
 
+/* === Row of buttons === */
 .buttonRow{
     display: flex;
     justify-content: space-between;
 }
 
+/* === on click === */
 .btn.clicked{
     background-color: #a2a2a2;
 }
 
+/* === Navigation Bar === */
 .navLinks{
     display: flex;
     justify-content: space-between;
@@ -89,17 +100,20 @@ body{
     flex-direction: row;
 }
 
+/* === nav Links === */
 li a{
     color: white;
     text-align: center;
     text-decoration: none;
 }
 
+/* === home page nav === */
 .homeNav{
     text-align: center;
     padding: 2%;
 }
 
+/* === product info links === */
 .productInfo > a{
     color: black;
 }
@@ -110,6 +124,7 @@ li a{
     font-size: 1.5em;
 }
 
+/* === centered white text === */
 .centerWhite{
     color: white;
     text-align: center;
@@ -117,6 +132,7 @@ li a{
     padding-bottom: 2em;
 }
 
+/* === products page=== */
 .productsHeader{
     text-align: center;
     color: black;
@@ -127,6 +143,7 @@ li a{
     margin-right: 2%;
 }
 
+/* === grid layout for products list  === */
 .productsList{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -135,12 +152,14 @@ li a{
     margin-top: 5%;
 }
 
+/* === individual product sections === */
 .productsList > div{
     background-color: #ccccccc9;
     margin: 2%;
     color: black;
 }
 
+/* === structure of each product box === */
 .oneProduct, .twoProduct, .threeProduct {
     display: grid;
     grid-template-rows: 3fr 0.5fr 0.5fr 0.5fr;
@@ -148,6 +167,7 @@ li a{
     border-radius: 3%;
 }
 
+/* === search drop down === */
     .searchContainer {
       display: flex;
       align-items: flex-start;
@@ -158,7 +178,7 @@ li a{
     .searchIcon {
       cursor: pointer;
     }
-    
+    /* === hidden search box drop down === */
     .searchDropdown {
       display: none;
       flex-direction: column;
@@ -172,11 +192,11 @@ li a{
       z-index: 1000;
       width: 220px;
     }
-    
+    /* === show when toggled === */
     .searchDropdown.show {
       display: flex;
     }
-    
+    /* === input styling === */
     #searchInput {
       padding: 8px;
       font-size: 16px;
@@ -211,6 +231,7 @@ li a{
       background-color: #ddd;
     }
 
+    /* === Product Details page === */
     .productBox{
         padding: 2%;
         margin-top: 5%;
@@ -221,6 +242,7 @@ li a{
         text-align: left;
         position: relative;
     }
+    /* Grid: image and text side-by-side */
     .productsInfo{
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -252,13 +274,13 @@ li a{
     color: black;
     z-index: 100;
 }
-
+/* === CART STYLES === */
 .cartIcon{
     position: relative;
     display: inline-block;
     right: 10px;
 }
-
+/* Number bubble on cart icon */
 .cartCountIcon{
     position: absolute;
     bottom: -8px;
@@ -285,7 +307,7 @@ li a{
     margin: 2em;
     border-radius: 1em;
 }
-
+/* Grid layout for each cart item */
 .cartContainer, .cartItem{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
@@ -299,7 +321,7 @@ li a{
     font-weight: normal;
 }
 
-
+/* === CHECKOUT FORM === */
 .checkOutForm{
     max-width: 80%;
     margin: auto;
@@ -334,7 +356,7 @@ box-sizing: border-box;
 .paymentRow input {
   flex: 1;
 }
-
+/* Submit button */
 button[type="submit"] {
     width: 100%;
     padding: 1em;
@@ -349,7 +371,9 @@ button[type="submit"] {
   .pageSpacer {
     height: 2vh; /* or try 50px for fixed size */
   }
+/* === RESPONSIVE DESIGN === */
 
+/* Large screen overlay background */
   @media (max-width: 2000px){
     .imageOverlay{
         width: 100vw;
@@ -357,7 +381,7 @@ button[type="submit"] {
         background-color: rgba(0, 0, 0, 0.5);
     }
 }
-
+/* Small screen layout changes */
 @media (max-width: 844px){
 
     .blackBox{

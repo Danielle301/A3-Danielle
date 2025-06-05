@@ -1,28 +1,29 @@
+// changes the show or hide property when the search item is clicked
 function toggleSearchUI() {
     const dropdown = document.getElementById("searchDropdown");
-    dropdown.classList.toggle("show");
+    dropdown.classList.toggle("show"); // adds/removes the show class
     if (dropdown.classList.contains("show")) {
+      //puts the curser in the input box 
       document.getElementById("searchInput").focus();
     }
   }
-
+//filters the dropdown options based in the input 
   function filterOptions() {
     const input = document.getElementById("searchInput");
-    const filter = input.value.toUpperCase();
-    const links = document.querySelectorAll("#dropdownOptions a");
+    const filter = input.value.toUpperCase(); // makes it all upper case so it matches 
+    const links = document.querySelectorAll("#dropdownOptions a"); // the links 
 
     links.forEach(link => {
-      const txt = link.textContent || link.innerText;
+      const txt = link.textContent || link.innerText; // if the link includs the typed in text it is shown 
       link.style.display = txt.toUpperCase().includes(filter) ? "" : "none";
     });
   }
-
-  // Optional: Close if clicking outside
+  // Close if clicking outside of search function
   window.onclick = function (event) {
 const dropdown = document.getElementById("searchDropdown");
 const input = document.getElementById("searchInput");
 const options = document.querySelectorAll("#dropdownOptions a");
-
+//if the click is outside the search area 
 if (!event.target.closest(".searchContainer")) {
   // Hide the dropdown
   dropdown.classList.remove("show");
@@ -36,7 +37,7 @@ if (!event.target.closest(".searchContainer")) {
   });
 }
 };
-
+// animation when the button is clicked 
 document.querySelectorAll('.btn3').forEach(button =>{
     button.addEventListener('click', () => {
         button.classList.add('clicked');
@@ -44,9 +45,9 @@ document.querySelectorAll('.btn3').forEach(button =>{
     });
 });
 
-
+// get the cart from local storage or make a new empty one 
 const cart = JSON.parse(localStorage.getItem("cart")) || {};
-
+// adds a product to cart 
 function addToCart(productName, productPrice) {
   if (cart[productName]) {
     cart[productName].quantity += 1;
@@ -86,7 +87,7 @@ function updateCartDisplay() {
             const item = cart[product];
             const itemDiv = document.createElement("div");
             itemDiv.classList.add("cartItem");
-
+            // show product name, quantity and total price
             itemDiv.innerHTML = `
             <div>${product}</div>
             <div>${item.quantity}</div>
@@ -97,6 +98,8 @@ function updateCartDisplay() {
 
           grandTotal += item.totalPrice;
           }
+
+          // add the final row 
           const totalDiv = document.createElement("div");
           totalDiv.classList.add("cartItem");
           totalDiv.innerHTML = `
@@ -107,7 +110,7 @@ function updateCartDisplay() {
 cartItemsContainer.appendChild(totalDiv);
 
 
-
+          // clear the cart when button is clicked 
           const clearBtn = document.getElementById("clearCart");
           clearBtn.addEventListener("click", () =>{
             localStorage.removeItem("cart");
@@ -134,7 +137,7 @@ cartItemsContainer.appendChild(totalDiv);
         }
       }
 
-
+        // show the checkout forrm when the button is clicked 
       document.addEventListener("DOMContentLoaded", () => {
         const checkoutBtn = document.getElementById("checkoutButton");
         const checkoutForm = document.getElementById("checkOutForm");
@@ -148,11 +151,11 @@ cartItemsContainer.appendChild(totalDiv);
       });
 
 
-
+      // update card count when page loads 
       document.addEventListener("DOMContentLoaded", () =>{
         updateCartCount();
       });
-
+      // when the form is submitted clear the cart 
       document.addEventListener("DOMContentLoaded", () => {
         const checkoutForm = document.getElementById("checkOutForm");
       
